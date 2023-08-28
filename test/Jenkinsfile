@@ -1,0 +1,12 @@
+pipeline {
+    
+    stages {
+        stage('SCM Checkout ') {
+          git 'https://github.com/debashishbarua/test'
+        }
+       stage('Package') {
+           sh 'mvn package'
+        }
+
+    }
+}
